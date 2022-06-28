@@ -1,0 +1,30 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/sample-rabbitmq/src",
+  "monorepo": true,
+  "root": "apps/sample-rabbitmq",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/sample-rabbitmq/tsconfig.app.json"
+  },
+  "projects": {
+    "sample-rabbitmq": {
+      "type": "application",
+      "root": "apps/sample-rabbitmq",
+      "entryFile": "main",
+      "sourceRoot": "apps/sample-rabbitmq/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/sample-rabbitmq/tsconfig.app.json"
+      }
+    },
+    "client": {
+      "type": "application",
+      "root": "apps/client",
+      "entryFile": "main",
+      "sourceRoot": "apps/client/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/client/tsconfig.app.json"
+      }
+    }
+  }
+}
